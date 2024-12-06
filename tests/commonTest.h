@@ -37,4 +37,5 @@ T *GMockHelper<T>::instance = nullptr;
     }
 
 #define MOCK_FUNCTION(_ClassName, _Ret, _FunctionName, _Args) \
+    GMOCK_INTERNAL_ASSERT_PARENTHESIS(_Args);                 \
     MOCK_FUNCTION_IMPL(_ClassName, _FunctionName, GMOCK_PP_NARG0 _Args, (GMOCK_INTERNAL_SIGNATURE(_Ret, _Args)))
