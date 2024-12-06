@@ -12,9 +12,11 @@ main_src = []
 src = []
 inc = include_directories('include')
 
+add_project_link_arguments('/MAP', language: ['c', 'cpp'])
+
 subdir('src')
 
-both_libs = both_libraries(
+lib = static_library(
     'sample-meson',
     src,
     include_directories: inc,
@@ -26,7 +28,7 @@ executable(
   include_directories: inc,
   implicit_include_directories: false,
   install: true,
-  link_with: both_libs.get_static_lib(),
+  link_with: lib,
 )
 
 subdir('tests')
