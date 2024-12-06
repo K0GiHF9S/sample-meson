@@ -17,13 +17,14 @@ if coverage.found()
     )
 endif
 
+dbghelp = meson.get_compiler('c').find_library('Dbghelp')
 sample1_test = executable(
     'sample1_test',
     ['sample1Test.cpp', 'sample2Mock.cpp'],
     include_directories: inc,
     implicit_include_directories: false,
-    dependencies: test_deps,
-    link_with: lib,
+    dependencies: test_deps + dbghelp,
+    link_with: both_libs.get_static_lib(),
 )
 
 test('sample1 test', sample1_test, protocol: 'gtest')

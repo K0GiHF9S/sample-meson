@@ -3,6 +3,10 @@
     "files.associations": {
         "stdexcept": "cpp",
         "iosfwd": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "sample2.h": "c",
+        "chrono": "cpp",
+        "span": "cpp",
+        "utility": "cpp"
     },
 }

@@ -14,7 +14,7 @@ inc = include_directories('include')
 
 subdir('src')
 
-both_lib = both_libraries(
+both_libs = both_libraries(
     'sample-meson',
     src,
     include_directories: inc,
@@ -26,7 +26,7 @@ executable(
   include_directories: inc,
   implicit_include_directories: false,
   install: true,
-  link_with: both_lib.get_shared_lib(),
+  link_with: both_libs.get_static_lib(),
 )
 
-# subdir('tests')
+subdir('tests')
