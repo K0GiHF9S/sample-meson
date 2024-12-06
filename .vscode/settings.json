@@ -1,0 +1,8 @@
+{
+    "mesonbuild.configureOnOpen": false,
+    "files.associations": {
+        "stdexcept": "cpp",
+        "iosfwd": "cpp",
+        "sstream": "cpp"
+    },
+}
