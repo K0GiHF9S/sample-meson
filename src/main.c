@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
         return 1;
     }
     printf("This is project %s.\n", PROJECT_NAME);
-    SampleFunc1(3, 2);
-    printf("This is project %d.\n", SampleFunc2(NULL));
+    SampleFunc1_1(3, 2);
+    printf("This is project %d.\n", SampleFunc2_1(NULL));
     return 0;
 }
